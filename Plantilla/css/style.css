@@ -342,5 +342,80 @@ body {
     font-weight: bold;
   }
 }
+/** Error **/
+.background {
+  background: radial-gradient(circle, #e9d529 0%, #3a802f 100%);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-family: "Nunito", sans-serif;
+}
+.background .error {
+  background-color: white;
+  width: 320px;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #000;
+}
+.background .error .logo-fondo {
+  background-color: #3a802f;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background .error img {
+  width: 60%;
+}
+.background .error p {
+  margin: 10px 20px;
+  font-size: 14px;
+  color: #98a6ad;
+  padding-bottom: 15px;
+}
+.background .error span {
+  font-weight: bold;
+}
+.background .error .numeros {
+  font-size: 75px;
+  padding: 0;
+  color: red;
+  font-weight: 800;
+  filter: drop-shadow(0px 0px 3px #666);
+  letter-spacing: 10px;
+}
+.background .error .numeros i {
+  font-size: 75px;
+}
+.background .error h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 10px;
+  padding-bottom: 5px;
+  filter: drop-shadow(0px 0px 2px #666);
+}
+.background .error .boton-error {
+  background-color: #3a802f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  width: 80%;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.background .error .boton-error:hover {
+  background-color: #e9d529;
+  color: #000;
+  cursor: pointer;
+}
+.background .centrado {
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */
