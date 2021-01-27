@@ -1,0 +1,52 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+}
+
+.ctr {
+  margin: 20px;
+  padding: 10px 0px 10px 10px;
+}
+.ctr input[type=text],
+.ctr input[type=email] {
+  border: none;
+  font-size: 14px;
+  width: calc(100% - 15px);
+  margin-left: 10px;
+  color: #ccc !important;
+  transition: all 0.3s;
+}
+.ctr input[type=text]:focus,
+.ctr input[type=email]:focus {
+  outline: none !important;
+  display: block;
+  color: #555 !important;
+}
+.ctr span {
+  position: absolute;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.ctr .colorholder {
+  color: #ccc !important;
+}
+.ctr .titulo-span {
+  margin-top: -27px;
+  background-color: white;
+  padding: 3px;
+  color: #333 !important;
+}
+
+.border-focus {
+  border: 2px solid #3a802F !important;
+}
+
+.border-normal {
+  border: 2px solid #ccc !important;
+}
+
+/*# sourceMappingURL=style.css.map */

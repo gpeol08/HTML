@@ -10,16 +10,16 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
+
 <body>
-    
+
     <main class="formulario">
         <div class="form">
             <!-- <h1>Maquinaria del humaya</h1> -->
             <img src="img/WMHH.png" alt="">
 
-
+            <!--ddd-->
             <h3>Iniciar sesión</h3>
             <p class="login">Ingrese su dirección de correo electrónico y contraseña para acceder a la cuenta.</p>
 
@@ -40,7 +40,22 @@
 
 
     </main>
+    <script>
+        var slideIndex = 0;
+        showSlides();
 
+        function showSlides() {
+            if (slideIndex == 7) slideIndex = 0;
+            slideIndex++;
+            var banner = document.getElementsByClassName("banner");
+            var urlimg = "Tractor" + slideIndex + ".jpg";
+            banner[0].style.background = "url(img/" + urlimg + ")";
+            // banner[0].style.background = "url(img/Tractor3.jpg) no-repeat";
+            banner[0].style.backgroundSize = "cover";
+            // banner[0].style.background - repeat = "no-repeat";
+            setTimeout(showSlides, 6000); // Change image every 2 seconds
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Controles HTML</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <form method="get">
+        <div class="ctr border-normal">
+            <span class="colorholder">Nombre</span>
+            <input type="text" id="Nombre" onfocus="txtfocus(this)" onblur="txtLostFocus(this)">
+        </div>
+        <div class="ctr border-normal">
+            <span class="colorholder">Email </span>
+            <input type="email" required id="Email" onfocusin="txtfocus(this)" onblur="txtLostFocus(this)">
+        </div>
+        <input type="submit" value="Guardar" />
+    </form>
+    <script>
+        function txtfocus(e) {
+            var padre = document.getElementById(e.id).parentNode;
+            BorderEfecto(padre, true);
+            PositionTituloSpan(padre.childNodes[1], true, e.value.length)
+        }
+
+        function txtLostFocus(e) {
+            var padre = document.getElementById(e.id).parentNode;
+            BorderEfecto(padre, false);
+            PositionTituloSpan(padre.childNodes[1], false, e.value.length)
+        }
+
+        function BorderEfecto(e, foco) {
+            if (foco)
+                e.className = "ctr border-focus";
+            else
+                e.className = "ctr border-normal";
+        }
+
+        function PositionTituloSpan(e, foco, valor) {
+            if (e.className.includes("titulo-span")) {
+                if (!foco && valor == 0)
+                    e.className = "colorholder";
+            } else if (foco && valor == 0)
+                e.className += " titulo-span";
+        }
+    </script>
+</body>
+
+</html>
