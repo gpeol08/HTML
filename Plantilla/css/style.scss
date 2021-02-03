@@ -9,10 +9,10 @@ html {
 }
 
 * {
-     margin: 0px;
-     padding: 0px;
-     font-family: 'Nunito', sans-serif;
- }
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+}
 
 $colorLetra: #e9d529;
 $colorfondo:#3a802f;
@@ -195,7 +195,6 @@ body {
                         margin-top: -40px;
                         margin-left: 200px !important;
                         box-shadow: 0px 0px 4px rgb(233, 213, 41, .9);
-                        
                         li {
                             // margin-left: 0px!important;
                             // margin-right: 5px !important;
@@ -241,23 +240,21 @@ body {
 
 
 /** login **/
+
 .formulario {
     // background-color: #fff;
-    background-color: $colorfondo;
     margin: 0;
     position: fixed;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-
-    .form{
+    .form {
+        background-color: $colorfondo;
         padding: 30px 20px;
-
-        img{
+        img {
             width: 50%;
             display: block;
             margin: auto;
         }
-
         h1 {
             text-align: center;
             font-size: 34px;
@@ -265,23 +262,19 @@ body {
             color: #3a802f;
             filter: drop-shadow(1px 1px 2px #666);
         }
-
         h3 {
             // color: #6c757d;
             color: $colorLetra;
             margin: 0;
             padding-top: 20px;
         }
-
         p.login {
             color: #98a6ad;
             margin: 0;
             padding-top: 10px;
             font-size: 16px;
             line-height: 1.2;
-    
         }
-
         label {
             display: block;
             // color: #6c757d;
@@ -290,20 +283,21 @@ body {
             padding-top: 30px;
             margin-bottom: 10px;
         }
-
         input:not([type="submit"]),
         textarea,
         select {
-        padding: 5px;
-        display: block;
-        width: 100%;
-        background-color: #fff;
-        margin-bottom: 5px;
-        color: #98a6ad;
-        border: 1px solid #dee2e6;
-        border-radius: 3px;
+            padding: 5px;
+            display: block;
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 5px;
+            color: #98a6ad;
+            border: 1px solid #dee2e6;
+            border-radius: 3px;
         }
-
+        input[type="email"]:hover {
+            transform: scale(1.1);
+        }
         .boton-login {
             // background-color: #727cf5;
             background-color: #fff;
@@ -319,42 +313,37 @@ body {
             border-radius: 3px;
             transition: all .3s ease-in-out;
         }
-        
         .boton-login:hover {
             // background-color: #6666ff;
             background-color: $colorLetra;
             cursor: pointer;
         }
     }
-
     .banner {
         display: none;
     }
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
     .formulario {
         height: 100%;
         width: 100%;
         position: fixed;
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 300px 1fr;
         margin: 0;
         background-color: $colorfondo;
-
         .form {
             padding: 30px 20px;
-
-            img{
+            img {
                 width: 100%;
             }
         }
-
         .banner {
-            background-image: url(../img/banner.jpeg);
-            background-position: center center;
+            // background-image: url("../img/Tractor3.jpg");
+            background-repeat: no-repeat;
+            // background-position: center;
             background-size: cover;
-            height: 100vh;
         }
         .texto-banner {
             height: 100%;
@@ -363,10 +352,9 @@ body {
             justify-content: flex-end;
             text-align: center;
         }
-
         p.frase {
             padding: 30px;
-            margin: 0;
+            // margin: 0;
             background-color: rgba(0, 0, 0, 0.55);
             width: 100%;
             font-size: 24px;
@@ -374,12 +362,52 @@ body {
             color: #e9d529;
             text-transform: normal;
             line-height: 1.5;
+            // margin: 15px;
+            // margin-right: 20px !important;
         }
-
         .frase span {
             display: block;
             font-size: 22px;
             font-weight: bold;
         }
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            // margin: auto;
+            .mySlides {
+                display: none;
+                .numbertext {
+                    color: #f2f2f2;
+                    font-size: 12px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
     }
 }

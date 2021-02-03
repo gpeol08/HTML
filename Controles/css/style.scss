@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+}
+
+$main:#3a802F;
+.ctr {
+    margin: 20px;
+    padding: 10px 0px 10px 10px;
+    input[type="text"],
+    input[type="email"] {
+        border: none;
+        font-size: 14px;
+        width: calc(100% - 15px);
+        margin-left: 10px;
+        color: #ccc!important;
+        transition: all .3s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+        outline: none!important;
+        display: block;
+        color: #555!important;
+    }
+    span {
+        position: absolute;
+        z-index: 1;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .colorholder {
+        color: #ccc !important;
+    }
+    .titulo-span {
+        margin-top: -27px;
+        background-color: white;
+        padding: 3px;
+        color: #333 !important;
+    }
+}
+
+.border-focus {
+    border: 2px solid $main!important;
+}
+
+.border-normal {
+    border: 2px solid #ccc!important;
+}
