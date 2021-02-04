@@ -1,0 +1,12 @@
+html,body{
+    color:white;
+    background-color:#21232A;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    padding: 20px 0px 0px 20px;
+}
+
+button{
+    font-size: 16px;
+    padding: 10px;
+}

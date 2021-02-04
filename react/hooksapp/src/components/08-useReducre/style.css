@@ -1,0 +1,19 @@
+body{
+    padding: 20px;
+}
+p{
+    margin: 0px;
+}
+.list-group-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.list-group-item:hover{
+    color: green;
+}
+
+.completo{
+    text-decoration: line-through;
+}
