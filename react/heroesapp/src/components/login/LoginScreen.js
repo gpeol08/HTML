@@ -8,14 +8,15 @@ export const LoginScreen = ({ history }) => {
 	const {dispatch} = useContext(AuthContext);
 
 	const handleClick = () => {
-		// history.replace('/');
+
+		const last = localStorage.getItem('path') || '/';
+		history.replace(last);
 		dispatch({
 			type:types.login,
 			payload:{
 				name:'Guadalupe Olivas'
 			}
 		})
-		history.replace('/');
 	};
 
 	return (
